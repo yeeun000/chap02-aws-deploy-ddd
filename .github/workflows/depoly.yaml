@@ -120,7 +120,7 @@ jobs:
           service: ${{ env.ECS_SERVICE }}
           # 대상 ECS 클러스터 이름
           cluster: ${{ env.ECS_CLUSTER }}
-            # 배포가 안정화될 때까지 기다리기 (true: 새 태스크가 완전히 실행되고 헬스체크 통과까지 대기)
-            # 참고로 이 옵션을 사용하면 배포가 완료될 때까지 워크플로우가 대기하게 되며
-            # CI/CD에서는 보통 false를 사용해 배포가 완료되면 다음 단계로 넘어가도록 설정한다.
-            wait-for-service-stability: true
+          # 배포가 안정화될 때까지 기다리기 (true: 새 태스크가 완전히 실행되고 헬스체크 통과까지 대기)
+          # 참고로 이 옵션을 사용하면 배포가 완료될 때까지 워크플로우가 대기하게 되며
+          # CI/CD에서는 보통 false를 사용해 배포가 완료되면 다음 단계로 넘어가도록 설정한다.
+          wait-for-service-stability: true
