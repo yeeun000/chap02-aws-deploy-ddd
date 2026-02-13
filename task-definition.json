@@ -1,9 +1,9 @@
 {
   "containerDefinitions": [
     {
-      "name": "chap02-container",
-      "image": "851725437767.dkr.ecr.ap-northeast-2.amazonaws.com/chap02-aws-deploy:latest",
-      "cpu": 256,
+      "name": "chap02-container-ddd",
+      "image": "266310526935.dkr.ecr.ap-northeast-2.amazonaws.com/chap02-aws-deploy@sha256:7060454a247f83615aa2782a4b0ac7738d116382430ca60fbfad33820f9d5117",
+      "cpu": 512,
       "memory": 307,
       "memoryReservation": 205,
       "portMappings": [
@@ -27,7 +27,7 @@
         },
         {
           "name": "AWS_S3_BUCKET",
-          "value": "menu-images-2024-ohgi"
+          "value": "menu-images-2026-ddd"
         },
         {
           "name": "SPRING_PROFILES_ACTIVE",
@@ -35,7 +35,7 @@
         },
         {
           "name": "RDS_ENDPOINT",
-          "value": "menu-management-db.cp2s22sumkcx.ap-northeast-2.rds.amazonaws.com"
+          "value": "menu-management-db.crsguqi8ynau.ap-northeast-2.rds.amazonaws.com"
         },
         {
           "name": "STORAGE_TYPE",
@@ -53,7 +53,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/chap02-task-definition",
+          "awslogs-group": "/ecs/chap02-task-definition-20026-ddd",
           "awslogs-create-group": "true",
           "awslogs-region": "ap-northeast-2",
           "awslogs-stream-prefix": "ecs"
@@ -73,8 +73,8 @@
       "systemControls": []
     }
   ],
-  "family": "chap02-task-definition",
-  "executionRoleArn": "arn:aws:iam::851725437767:role/ecsTaskExecutionRole",
+  "family": "chap02-task-definition-20026-ddd",
+  "executionRoleArn": "arn:aws:iam::266310526935:role/ecsTaskExecutionRole",
   "networkMode": "bridge",
   "volumes": [],
   "placementConstraints": [],
@@ -84,7 +84,7 @@
   "requiresCompatibilities": [
     "EC2"
   ],
-  "cpu": "256",
+  "cpu": "512",
   "memory": "512",
   "runtimePlatform": {
     "cpuArchitecture": "X86_64",
